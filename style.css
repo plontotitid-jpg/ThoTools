@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+/* HEADER */
+
+header {
+    position: relative;
+    text-align: center;
+    padding: 45px 20px 30px;
+} 
+
+header h1 {
+    margin: 0;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+header p {
+    margin: 10px 0 0;
+    color: #6b7280;
+    font-size: 16px;
+}
+
+/* MAIN */
+
+main {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+    padding: 10px 20px 40px;
+}
+
+/* TOOL CARD */
+
+.tool-card {
+    background: #ffffff;
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.tool-card h2 {
+    margin: 0 0 18px;
+    font-size: 22px;
+}
+
+/* TEXTAREA */
+
+textarea {
+    width: 100%;
+    min-height: 180px;
+    padding: 15px;
+    resize: vertical;
+
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-family: inherit;
+    line-height: 1.5;
+
+    background: #fafafa;
+    color: #111827;
+
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #6b7280;
+    background: #ffffff;
+}
+
+/* STATISTICS */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.stats div {
+    text-align: center;
+    padding: 14px 8px;
+    background: #f3f4f6;
+    border-radius: 12px;
+}
+
+.stats span {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.stats small {
+    display: block;
+    margin-top: 4px;
+    color: #6b7280;
+}
+
+/* BUTTONS */
+
+.cleaner-buttons,
+.case-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 15px 0;
+}
+
+button {
+    border: none;
+    padding: 13px 15px;
+    border-radius: 10px;
+
+    background: #1f2937;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* OUTPUT */
+
+#cleanerOutput,
+#caseOutput {
+    background: #f3f4f6;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 35px 15px 25px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    main {
+        padding: 10px 12px 30px;
+    }
+
+    .tool-card {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cleaner-buttons,
+    .case-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    textarea {
+        min-height: 170px;
+    }
+}
+nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #1f2937;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    padding: 9px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav a:active {
+    transform: scale(0.97);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.tool-description {
+    margin: -8px 0 18px;
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.menu-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.menu-toggle {
+    position: relative;
+    top: auto;
+    right: auto;
+    border: none;
+    background: #1f2937;
+    color: white;
+    font-size: 28px;
+    width: 56px;
+    height: 50px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+
+.tool-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 240px;
+    background: white;
+    border-radius: 14px;
+    padding: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+
+.tool-menu.show {
+    display: flex;
+    flex-direction: column;
+}
+
+.tool-menu a {
+    color: #1f2937;
+    text-decoration: none;
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.tool-menu a:hover {
+    background: #f1f3f5;
+}

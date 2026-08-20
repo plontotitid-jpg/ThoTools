@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Text Tools - Free Online Text Tools</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>ThoTools</h1>
+    <p>Simple tools for everyday tasks.</p>
+
+    <nav>
+        <div class="menu-wrapper">
+    <button id="menuToggle" class="menu-toggle" aria-label="Open menu">
+        ☰
+    </button>
+
+    <div id="toolMenu" class="tool-menu">
+        <a href="#word-counter">Word Counter</a>
+        <a href="#text-cleaner">Text Cleaner</a>
+        <a href="#case-converter">Case Converter</a>
+        <a href="#lorem-generator">Lorem Ipsum Generator</a>
+        <a href="#text-reverser">Text Reverser</a>
+        <a href="#slug-generator">Slug Generator</a>
+        <a href="#json-formatter">JSON Formatter</a>
+    </div>
+        </div>
+
+      
+    </nav>
+</header>
+
+    <main>
+
+        <section class="tool-card" id="word-counter">
+            <h2>Word & Character Counter</h2>
+<p class="tool-description">
+    Count words, characters, lines, and characters without spaces in your text.
+</p>
+            <textarea
+                id="textInput"
+                placeholder="Paste or type your text here..."
+            ></textarea>
+
+            <div class="stats">
+                <div>
+                    <span id="wordCount">0</span>
+                    <small>Words</small>
+                </div>
+
+                <div>
+                    <span id="charCount">0</span>
+                    <small>Characters</small>
+                </div>
+
+                <div>
+                    <span id="charNoSpace">0</span>
+                    <small>Without Spaces</small>
+                </div>
+
+                <div>
+                    <span id="lineCount">0</span>
+                    <small>Lines</small>
+                </div>
+            </div>
+        </section>
+<section class="tool-card" id="text-cleaner">
+    <h2>Text Cleaner</h2>
+<p class="tool-description">
+    Clean messy text by removing extra spaces, empty lines, and duplicate lines.
+</p>
+    <textarea
+        id="cleanerInput"
+        placeholder="Paste messy text here..."
+    ></textarea>
+
+    <div class="cleaner-buttons">
+        <button id="removeExtraSpaces">Remove Extra Spaces</button>
+        <button id="removeEmptyLines">Remove Empty Lines</button>
+        <button id="removeDuplicates">Remove Duplicate Lines</button>
+        <button id="cleanAll">Clean All</button>
+    </div>
+
+    <textarea
+        id="cleanerOutput"
+        placeholder="Cleaned text will appear here..."
+        readonly
+    ></textarea>
+</section>
+      <section class="tool-card" id="case-converter">
+    <h2>Case Converter</h2>
+<p class="tool-description">
+    Quickly change your text to uppercase, lowercase, title case, or sentence case.
+</p>
+    <textarea
+        id="caseInput"
+        placeholder="Type or paste your text here..."
+    ></textarea>
+
+    <div class="case-buttons">
+        <button id="uppercaseBtn">UPPERCASE</button>
+        <button id="lowercaseBtn">lowercase</button>
+        <button id="capitalizeBtn">Capitalize Words</button>
+        <button id="sentenceBtn">Sentence case</button>
+    </div>
+
+    <textarea
+        id="caseOutput"
+        placeholder="Converted text will appear here..."
+        readonly
+    ></textarea>
+   </section>
+      
+<section class="tool-card" id="lorem-generator">
+    <h2>Lorem Ipsum Generator</h2>
+
+    <p class="tool-description">
+        Generate placeholder text for websites, designs, and projects.
+    </p>
+
+    <div class="lorem-controls">
+        <label for="paragraphCount">Number of paragraphs</label>
+
+        <input
+            type="number"
+            id="paragraphCount"
+            min="1"
+            max="20"
+            value="3"
+        >
+
+        <button id="generateLorem">Generate Lorem Ipsum</button>
+    </div>
+
+    <textarea
+        id="loremOutput"
+        placeholder="Generated Lorem Ipsum will appear here..."
+        readonly
+    ></textarea>
+
+    <button id="copyLorem">Copy Text</button>
+</section>
+
+<section class="tool-card" id="text-reverser">
+    <h2>Text Reverser</h2>
+
+    <p class="tool-description">
+        Reverse your text instantly, character by character.
+    </p>
+
+    <textarea
+        id="reverseInput"
+        placeholder="Type or paste your text here..."
+    ></textarea>
+
+    <button id="reverseButton">Reverse Text</button>
+
+    <textarea
+        id="reverseOutput"
+        placeholder="Reversed text will appear here..."
+        readonly
+    ></textarea>
+
+    <button id="copyReverse">Copy Text</button>
+</section>
+
+<section class="tool-card" id="slug-generator">
+    <h2>Slug Generator</h2>
+
+    <p class="tool-description">
+        Convert text into clean, URL-friendly slugs.
+    </p>
+
+    <textarea
+        id="slugInput"
+        placeholder="Enter your title or text here..."
+    ></textarea>
+
+    <button id="generateSlug">Generate Slug</button>
+
+    <textarea
+        id="slugOutput"
+        placeholder="Your slug will appear here..."
+        readonly
+    ></textarea>
+
+    <button id="copySlug">Copy Slug</button>
+</section>
+
+<section class="tool-card" id="json-formatter">
+    <h2>JSON Formatter</h2>
+
+    <p class="tool-description">
+        Format and validate JSON to make it easier to read.
+    </p>
+
+    <textarea
+        id="jsonInput"
+        placeholder='Paste your JSON here...'
+    ></textarea>
+
+    <button id="formatJson">Format JSON</button>
+
+    <textarea
+        id="jsonOutput"
+        placeholder="Formatted JSON will appear here..."
+        readonly
+    ></textarea>
+
+    <button id="copyJson">Copy JSON</button>
+</section>
+      
+    </main>
+
+    <footer>
+        <p>Text Tools — Free online text utilities.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
